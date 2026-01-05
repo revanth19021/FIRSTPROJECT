@@ -23,5 +23,9 @@ def submit():
     message=request.form['message']
     return f"email :{email},message {message}"
 
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 if __name__=="__main__":
     app.run(debug=True)
