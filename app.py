@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template, request
 
 
 app=Flask(__name__)
@@ -13,9 +13,15 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/register', methods=["POST"])
+@app.route('/register')
 def register():
     return render_template('register.html')
+
+@app.route('/submit',methods=["post"])
+def submit():
+    email=request.form['email']
+    message=request.form['message']
+    return f"email :{email},message {message}"
 
 if __name__=="__main__":
     app.run(debug=True)
