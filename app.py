@@ -3,6 +3,7 @@ from flask import Flask,render_template, request,pymongo
 
 app=Flask(__name__)
 
+client=pymongo.MongoClient("mongodb+srv://revanth200319:revanth200319@cluster0.zrtypbn.mongodb.net/")
 
 @app.route('/')
 def index():
