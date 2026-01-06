@@ -24,6 +24,11 @@ def submit():
     message=request.form['message']
     return f"email :{email},message {message}"
 
+
+@app.route('/services')
+def services():
+    return render_template('services.html')
+
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
