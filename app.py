@@ -8,6 +8,9 @@ print("Revanth")
 def index():
     return render_template('index.html')
 
+
+print("Added new one to only the branch")
+
 @app.route('/about')
 def about():
     return render_template('about.html')
